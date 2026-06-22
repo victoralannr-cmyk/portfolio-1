@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", "Space Grotesk", sans-serif;
+
+  --color-brand-black: #1A0A2E;
+  --color-brand-purple-dark: #2D1554;
+  --color-brand-purple: #5C2D8C;
+  --color-brand-white: #F0F0F0;
+  --color-brand-gold: #D4A843;
+  --color-brand-gold-light: #F0CD7A;
+}
+
+/* Custom scrollbar and smooth scroll */
+html {
+  scroll-behavior: smooth;
+  background-color: #1A0A2E;
+  color: #F0F0F0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A0A2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D1554;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5C2D8C;
+}
+
+/* Fade in animation styles */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* LogoLoop Component Styles */
+.logoloop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logoloop--horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.logoloop--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoloop__track {
+  display: flex;
+  will-change: transform;
+}
+
+.logoloop--horizontal .logoloop__track {
+  flex-direction: row;
+  width: max-content;
+}
+
+.logoloop--vertical .logoloop__track {
+  flex-direction: column;
+  height: max-content;
+}
+
+.logoloop__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-shrink: 0;
+}
+
+.logoloop--horizontal .logoloop__list {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--logoloop-gap, 32px);
+  padding-right: var(--logoloop-gap, 32px);
+}
+
+.logoloop--vertical .logoloop__list {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--logoloop-gap, 32px);
+  padding-bottom: var(--logoloop-gap, 32px);
+}
+
+.logoloop__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  height: var(--logoloop-logoHeight, 28px);
+}
+
+.logoloop__link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.logoloop__node {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  height: 100%;
+}
+
+/* Fade effects */
+.logoloop--fade::before,
+.logoloop--fade::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logoloop--horizontal.logoloop--fade::before {
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to right, var(--logoloop-fadeColor, #1A0A2E), transparent);
+}
+
+.logoloop--horizontal.logoloop--fade::after {
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to left, var(--logoloop-fadeColor, #1A0A2E), transparent);
+}
+
+.logoloop--vertical.logoloop--fade::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(to bottom, var(--logoloop-fadeColor, #1A0A2E), transparent);
+}
+
+.logoloop--vertical.logoloop--fade::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(to top, var(--logoloop-fadeColor, #1A0A2E), transparent);
+}
+
+/* Scale on hover */
+.logoloop--scale-hover .logoloop__item {
+  transition: transform 0.2s ease;
+}
+
+.logoloop--scale-hover .logoloop__item:hover {
+  transform: scale(1.05);
+}
+
+/* Lightfall Background Styles */
+.lightfall-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.lightfall-beam {
+  position: absolute;
+  top: -160px;
+  height: 160px;
+  will-change: transform, opacity;
+  animation: lightfall-down linear infinite;
+  filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.3));
+}
+
+@keyframes lightfall-down {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(115vh);
+    opacity: 0;
+  }
+}
+
+/* Background Slow Rotating Logo Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 120s linear infinite;
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 150s linear infinite;
+}
+

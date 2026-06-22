@@ -1,0 +1,239 @@
+import { useState, useEffect } from 'react';
+import { ArrowRight, Users, Briefcase, Award, ArrowUpRight } from 'lucide-react';
+import { ShaderGradient } from './ShaderGradient';
+import { LogoLoop } from './LogoLoop';
+
+function CountUp({ end, duration = 4500, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    const startValue = 0;
+    let animFrameId: number;
+
+    // Cubic ease-out function for a beautiful cadenced progression
+    const easeOutCubic = (t: number): number => {
+      return 1 - Math.pow(1 - t, 3);
+    };
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easedProgress = easeOutCubic(progress);
+      setCount(Math.floor(easedProgress * (end - startValue) + startValue));
+
+      if (progress < 1) {
+        animFrameId = requestAnimationFrame(animate);
+      }
+    };
+
+    animFrameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animFrameId);
+  }, [end, duration]);
+
+  return <>{count}{suffix}</>;
+}
+
+export default function Hero() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section 
+      id="hero" 
+      className="relative pt-32 pb-20 md:py-40 px-4 md:px-8 overflow-hidden bg-brand-black"
+    >
+      {/* Background ambient shader gradient */}
+      <ShaderGradient
+        animate="on"
+        axesHelper="on"
+        bgColor1="#000000"
+        bgColor2="#000000"
+        brightness={1.1}
+        cAzimuthAngle={220}
+        cDistance={3.7}
+        cPolarAngle={135}
+        cameraZoom={1}
+        color1="#5606ff"
+        color2="#b13dfe"
+        color3="#000000"
+        destination="onCanvas"
+        embedMode="off"
+        envPreset="dawn"
+        format="gif"
+        fov={40}
+        frameRate={10}
+        gizmoHelper="hide"
+        grain="off"
+        lightType="env"
+        pixelDensity={1}
+        positionX={-0.4}
+        positionY={0.1}
+        positionZ={0}
+        range="disabled"
+        rangeEnd={40}
+        rangeStart={39.5}
+        reflection={0.1}
+        rotationX={0}
+        rotationY={0}
+        rotationZ={235}
+        shader="defaults"
+        type="waterPlane"
+        uAmplitude={0}
+        uDensity={1.1}
+        uFrequency={5.5}
+        uSpeed={0.1}
+        uStrength={2.4}
+        uTime={39.5}
+        wireframe={false}
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        
+        {/* Left Side: Introduction & Stats (Required: clientes satisfeitos: 250, 1 ano de experiencia) */}
+        <div className="w-full lg:w-1/2 text-left flex flex-col justify-center" id="hero-info-column">
+          {/* Greeting Badge */}
+          <div className="inline-flex items-center gap-2 bg-brand-purple-dark/60 border border-brand-purple/50 px-4 py-1.5 rounded-full text-brand-white/95 text-xs font-semibold mb-6 w-fit animate-fade-in">
+            <span className="w-2 h-2 rounded-full bg-brand-gold" />
+            Portfólio Profissional
+          </div>
+
+          <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-brand-white leading-tight tracking-tight mb-6">
+            Sites que encantam, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white">
+              vendas que aceleram.
+            </span>
+          </h1>
+
+          <p className="text-base md:text-lg text-brand-white/80 leading-relaxed mb-6 max-w-xl">
+            Desenvolvo landing pages de alta conversão, portais institucionais e aplicações web focados em potencializar a autoridade da sua marca e otimizar seus processos de venda na internet.
+          </p>
+
+          {/* Logo Loop Showcasing Technology Stack */}
+          <div className="w-full max-w-xl mb-8 bg-brand-purple-dark/20 border border-brand-purple/10 py-3 px-4 rounded-xl">
+            <LogoLoop 
+              logos={[
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />REACT</span> },
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-purple" />TYPESCRIPT</span> },
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />TAILWIND</span> },
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />NODE.JS</span> },
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-gold-light" />NEXT.JS</span> },
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-violet-600" />FIGMA</span> },
+                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-orange-500" />WEBFLOW</span> }
+              ]} 
+              speed={40}
+              direction="left"
+              logoHeight={24}
+              gap={24}
+              fadeOut={true}
+              fadeOutColor="#190A2E"
+              pauseOnHover={true}
+            />
+          </div>
+
+          {/* Core Required Stats Block: right side of the photo */}
+          <div className="grid grid-cols-2 gap-4 md:gap-6 mb-10" id="hero-priority-stats">
+            {/* Clientes Satisfeitos: 250 */}
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-purple-dark/80 to-brand-black border border-brand-purple/30 hover:border-brand-gold/40 transition-all duration-300 group shadow-md shadow-brand-black/30">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-300">
+                  <Users size={20} />
+                </div>
+                <span className="text-stone-400 text-xs md:text-sm font-medium">Clientes</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-heading font-extrabold text-brand-white group-hover:text-brand-gold transition-colors">
+                <CountUp end={250} suffix="+" />
+              </h3>
+              <p className="text-brand-white/60 text-xs md:text-sm mt-1">
+                Clientes Satisfeitos
+              </p>
+            </div>
+
+            {/* 1 ano de experiencia */}
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-purple-dark/80 to-brand-black border border-brand-purple/30 hover:border-brand-gold/40 transition-all duration-300 group shadow-md shadow-brand-black/30">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-300">
+                  <Briefcase size={20} />
+                </div>
+                <span className="text-stone-400 text-xs md:text-sm font-medium">Atuação</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-heading font-extrabold text-brand-white group-hover:text-brand-gold transition-colors">
+                1 Ano
+              </h3>
+              <p className="text-brand-white/60 text-xs md:text-sm mt-1">
+                De Experiência Sólida
+              </p>
+            </div>
+          </div>
+
+          {/* Action Callouts */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <button
+              onClick={scrollToContact}
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-gold-light text-brand-black font-bold text-center hover:shadow-lg hover:shadow-brand-gold/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              id="hero-cta-button-deal"
+            >
+              <span>Fechar Negócio</span>
+              <ArrowRight size={18} />
+            </button>
+            <button
+              onClick={scrollToProjects}
+              className="px-8 py-4 rounded-xl bg-brand-purple-dark/80 hover:bg-brand-purple-dark border border-brand-purple/50 text-brand-white font-semibold text-center hover:border-brand-gold-light hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              id="hero-cta-button-projects"
+            >
+              <span>Ver Projetos</span>
+              <ArrowUpRight size={18} />
+            </button>
+          </div>
+        </div>
+
+        {/* Right Side: Photo with custom premium frame */}
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end" id="hero-photo-column">
+          <div className="relative group max-w-sm md:max-w-md w-full px-4">
+            
+            {/* Outer decorative gradient border */}
+            <div className="absolute -inset-1 bg-gradient-to-tr from-brand-purple via-brand-gold to-brand-gold-light rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-500 group-hover:scale-[1.01]" />
+            
+            {/* Main Image frame */}
+            <div className="relative bg-brand-black rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-purple/50">
+              <img 
+                src="https://i.postimg.cc/WzCfr8fN/Whats-App-Image-2026-06-16-at-20-28-18.jpg" 
+                alt="Victor Santiago - Desenvolvedor Web" 
+                className="w-full h-[380px] md:h-[480px] object-cover object-top transition duration-500 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+                id="developer-profile-image"
+              />
+              
+              {/* Gold gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/10 to-transparent opacity-80" />
+              
+              {/* Small floating tag on the image */}
+              <div className="absolute bottom-4 left-4 right-4 bg-brand-black/80 backdrop-blur-md px-4 py-3 rounded-xl border border-brand-purple/30 flex items-center justify-between">
+                <div>
+                  <p className="text-white font-semibold text-sm">Victor Santiago</p>
+                  <p className="text-white/60 text-xs">Desenvolvedor Web & Designer</p>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                  <span className="text-xs text-emerald-400 font-medium">Online agora</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

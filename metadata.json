@@ -1,0 +1,6 @@
+{
+  "name": "Portfólio de Sites",
+  "description": "Portfólio profissional de desenvolvimento de sites, landing pages e aplicativos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
