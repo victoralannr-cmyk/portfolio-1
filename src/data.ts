@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
   {
     id: 'landing-pages',
     title: 'Landing Pages',
-    description: 'Páginas de vendas de alta conversão focadas em transformar visitantes em clientes compradores. Ideal para infoprodutos, e-books e captações.',
+    description: 'Páginas de vendas de alta conversão. Ideal para infoprodutos, e-books e captações.',
     badge: 'Mais Vendido',
     features: [
       'Copywriting direcionado e persuasivo',

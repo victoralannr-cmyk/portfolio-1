@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { ArrowRight, Users, Briefcase, Award, ArrowUpRight } from 'lucide-react';
 import { ShaderGradient } from './ShaderGradient';
 import { LogoLoop } from './LogoLoop';
@@ -115,7 +116,7 @@ export default function Hero() {
           {/* Greeting Badge */}
           <div className="inline-flex items-center gap-2 bg-brand-purple-dark/60 border border-brand-purple/50 px-4 py-1.5 rounded-full text-brand-white/95 text-xs font-semibold mb-6 w-fit animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-brand-gold" />
-            Portfólio Profissional
+            Portfólio 💼
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-brand-white leading-tight tracking-tight mb-6">
@@ -138,9 +139,43 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-base md:text-lg text-brand-white/80 leading-relaxed mb-6 max-w-xl">
-            Desenvolvo landing pages de alta conversão, portais institucionais e aplicações web focados em potencializar a autoridade da sua marca e otimizar seus processos de venda na internet.
-          </p>
+          <motion.div 
+            className="font-editorial italic text-2xl md:text-3xl text-brand-gold-light/95 tracking-wide mb-6 max-w-xl flex flex-wrap gap-x-[0.25em]"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.18,
+                  delayChildren: 0.2
+                }
+              }
+            }}
+            initial="hidden"
+            animate="visible"
+          >
+            {"Transformo visitantes em clientes".split(" ").map((word, index) => (
+              <motion.span
+                key={index}
+                className="inline-block"
+                variants={{
+                  hidden: { opacity: 0, x: -40 },
+                  visible: { 
+                    opacity: 1, 
+                    x: 0,
+                    transition: {
+                      type: "spring",
+                      stiffness: 25,
+                      damping: 11,
+                      mass: 0.9
+                    }
+                  }
+                }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </motion.div>
 
           {/* Logo Loop Showcasing Technology Stack */}
           <div className="w-full max-w-xl mb-8 bg-brand-purple-dark/20 border border-brand-purple/10 py-3 px-4 rounded-xl">

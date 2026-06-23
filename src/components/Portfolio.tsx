@@ -63,7 +63,7 @@ export default function Portfolio() {
             Projetos em Destaque
           </h2>
           <p className="text-brand-white/70 max-w-2xl mx-auto text-sm md:text-base">
-            Conheça alguns dos projetos de alta fidelidade desenvolvidos sob medida para clientes reais. Soluções focadas em velocidade, design exclusivo e conversão.
+            Conheça alguns dos projetos de alta fidelidade desenvolvidos sob medida para clientes reais.
           </p>
         </div>
 

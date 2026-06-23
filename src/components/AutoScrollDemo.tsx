@@ -198,15 +198,7 @@ export function AutoScrollDemo() {
     <div className="w-full flex flex-col items-center justify-center p-2 md:p-6" id="loop-demo-container">
       
       {/* Visual Controls / Header */}
-      <div className="flex items-center justify-between w-full max-w-4xl mb-6">
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-          <span className="text-[11px] uppercase tracking-widest text-brand-gold font-bold flex items-center gap-1.5 font-mono">
-            <Sparkles size={12} />
-            Auto-Scroll Demo (Em Loop)
-          </span>
-        </div>
-
+      <div className="flex items-center justify-end w-full max-w-4xl mb-6">
         {/* Viewport switcher tabs */}
         <div className="flex bg-brand-black/80 border border-brand-purple/20 p-1 rounded-xl shadow-lg">
           <button 

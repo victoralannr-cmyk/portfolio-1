@@ -89,7 +89,7 @@ export default function Header() {
             <img 
               src="https://i.postimg.cc/yxZC2M0L/3bdb5ef7-e8bf-4277-b955-8d0825e5942e.png" 
               alt="V S Logo" 
-              className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 invert brightness-[1.5] drop-shadow-[0_0_8px_rgba(139,92,246,0.7)]" 
+              className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" 
               referrerPolicy="no-referrer"
             />
           </div>

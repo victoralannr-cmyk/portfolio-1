@@ -16,9 +16,6 @@ export default function Services() {
           <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-brand-white mb-4">
             Serviços Especializados
           </h2>
-          <p className="text-brand-white/70 max-w-2xl mx-auto text-sm md:text-base">
-            Do planejamento visual ao código de alta performance, eu entrego a tecnologia que sua marca precisa para se destacar no ambiente digital.
-          </p>
         </div>
 
         {/* Services Grid (Landing pages, Sites e apps) */}
