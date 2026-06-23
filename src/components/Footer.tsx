@@ -22,14 +22,16 @@ export default function Footer() {
           <ArrowUpCircle size={24} className="group-hover:scale-110 transition-transform" />
         </button>
 
-        {/* Brand identity */}
-        <div className="text-center mb-8">
-          <h3 className="font-heading font-extrabold text-2xl text-brand-white tracking-tight mb-2">
-            V <span className="text-brand-gold">Santiago</span>
-          </h3>
-          <p className="text-xs md:text-sm text-brand-white/50 max-w-md mx-auto">
-            Criando experiências digitais memoráveis que convertem acessos em faturamento de forma escalável.
-          </p>
+        {/* Brand identity - Logo instead of text */}
+        <div className="mb-6 flex justify-center">
+          <div className="w-16 h-16 relative">
+            <img 
+              src="https://i.postimg.cc/yxZC2M0L/3bdb5ef7-e8bf-4277-b955-8d0825e5942e.png" 
+              alt="V S Logo" 
+              className="w-full h-full object-contain relative z-10 brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" 
+              referrerPolicy="no-referrer"
+            />
+          </div>
         </div>
 
         {/* Social connections (Required: instagram: victorys.sites, email: victorsites77@gmail.com) */}
