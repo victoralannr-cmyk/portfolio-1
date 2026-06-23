@@ -237,16 +237,16 @@ export default function Hero() {
           {/* Action Callouts */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
-              onClick={scrollToContact}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-gold-light text-brand-black font-bold text-center hover:shadow-lg hover:shadow-brand-gold/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Tenho%20interesse%20em%20fechar%20neg%C3%B3cio%20e%20fazer%20um%20or%C3%A7amento%20para%20o%20meu%20projeto.', '_blank')}
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white font-extrabold text-center hover:shadow-lg hover:shadow-brand-gold/35 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer animate-gradient-btn"
               id="hero-cta-button-deal"
             >
               <span>Fechar Negócio</span>
               <ArrowRight size={18} />
             </button>
             <button
-              onClick={scrollToProjects}
-              className="px-8 py-4 rounded-xl bg-brand-purple-dark/80 hover:bg-brand-purple-dark border border-brand-purple/50 text-brand-white font-semibold text-center hover:border-brand-gold-light hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20ver%20mais%20projetos%20e%20conhecer%20os%20seus%20trabalhos.', '_blank')}
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/30 to-brand-purple-dark/80 hover:from-brand-purple hover:to-brand-purple-dark border border-brand-purple/50 text-brand-white font-bold text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-indigo-950/40 animate-gradient-btn"
               id="hero-cta-button-projects"
             >
               <span>Ver Projetos</span>

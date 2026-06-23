@@ -169,11 +169,8 @@ export default function Portfolio() {
             </p>
           </div>
           <button
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-gold to-brand-gold-light text-brand-black md:w-auto font-bold text-sm hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap"
+            onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Estava%20vendo%20o%20seu%20portf%C3%B3lio%20de%20projetos%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20alta%20performance%20para%20a%20minha%20empresa.', '_blank')}
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white md:w-auto font-bold text-sm hover:from-brand-gold hover:to-brand-purple hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shadow-md hover:shadow-brand-gold/30 animate-gradient-btn"
             id="portfolio-cta-btn"
           >
             Quero um orçamento

@@ -65,25 +65,14 @@ export default function Services() {
                   </ul>
                 </div>
 
-                {/* Simulated Pricing or CTA anchor */}
+                {/* Simulated Pricing or CTA anchor pointing directly to WhatsApp */}
                 <button
                   onClick={() => {
-                    const element = document.getElementById('contact');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                      // Pre-fill type of service or select it
-                      const selectEl = document.getElementById('service-select') as HTMLSelectElement;
-                      if (selectEl) {
-                        if (service.id === 'landing-pages') selectEl.value = 'Landing Page';
-                        if (service.id === 'sites-institucionais') selectEl.value = 'Web Site';
-                        if (service.id === 'apps') selectEl.value = 'Aplicativo';
-                        
-                        // Fire change event
-                        selectEl.dispatchEvent(new Event('change', { bubbles: true }));
-                      }
-                    }
+                    const messageText = `Olá Victor! Tenho interesse em contratar os seus serviços de *${service.title}*. Gostaria de saber mais sobre prazos e valores.`;
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=5585998504580&text=${encodeURIComponent(messageText)}`;
+                    window.open(whatsappUrl, '_blank');
                   }}
-                  className="w-full py-2.5 rounded-xl bg-brand-black hover:bg-brand-purple-dark text-brand-white font-semibold text-xs border border-brand-purple/40 hover:border-brand-gold-light hover:text-brand-gold transition-all duration-300 cursor-pointer"
+                  className="w-full py-3 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light hover:scale-105 hover:text-brand-white text-brand-white font-extrabold text-xs tracking-wider uppercase border border-brand-purple/50 hover:border-brand-gold transition-all duration-300 cursor-pointer shadow-md animate-gradient-btn"
                   id={`service-cta-btn-${service.id}`}
                 >
                   Solicitar Serviços de {service.title}

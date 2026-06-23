@@ -238,3 +238,22 @@ html {
   animation: spin-slow-reverse 150s linear infinite;
 }
 
+/* Animated gradient button helper */
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-btn {
+  background-size: 200% 200%;
+  animation: animate-gradient 4s ease infinite;
+}
+
+

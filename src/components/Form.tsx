@@ -190,7 +190,7 @@ export default function Form() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-gold-light text-brand-black font-extrabold text-sm md:text-base uppercase tracking-wider hover:from-brand-gold-light hover:to-brand-gold transition-all duration-300 shadow-xl hover:shadow-brand-gold/20 hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3 cursor-pointer"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white font-extrabold text-sm md:text-base uppercase tracking-wider hover:from-brand-gold hover:to-brand-purple transition-all duration-300 shadow-xl hover:shadow-brand-gold/20 hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3 cursor-pointer animate-gradient-btn"
                 id="form-submit-cta"
               >
                 <span>{isSubmitting ? 'Redirecionando...' : 'Fechar negócio'}</span>
