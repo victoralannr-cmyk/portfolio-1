@@ -35,6 +35,15 @@ function CountUp({ end, duration = 4500, suffix = "" }: { end: number; duration?
 }
 
 export default function Hero() {
+  const [showRest, setShowRest] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowRest(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -111,8 +120,21 @@ export default function Hero() {
 
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-brand-white leading-tight tracking-tight mb-6">
             Sites que encantam, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white">
-              vendas que aceleram.
+            <span className="inline-flex items-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white">
+                S
+              </span>
+              <span 
+                className="inline-block overflow-hidden transition-all duration-1000 ease-out text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white"
+                style={{
+                  maxWidth: showRest ? '3.5em' : '0px',
+                  opacity: showRest ? 1 : 0,
+                  transform: showRest ? 'translateX(0)' : 'translateX(-10px)',
+                  marginLeft: showRest ? '0.05em' : '0px'
+                }}
+              >
+                antiago
+              </span>
             </span>
           </h1>
 

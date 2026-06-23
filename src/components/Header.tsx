@@ -75,14 +75,14 @@ export default function Header() {
           onClick={() => scrollToSection('top')}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="cursor-pointer flex items-center gap-4 group"
+          className="cursor-pointer flex items-center group"
           id="logo-brand-container"
         >
           {/* Custom Styled Monogram Logo using user's uploaded logo image */}
           <div className={`transition-all duration-300 flex items-center justify-center relative flex-shrink-0 ${
             isMinimized
-              ? 'w-11 h-11 md:w-12 md:h-12 -my-2'
-              : 'w-16 h-16 md:w-18 md:h-18 -my-4 md:-my-5'
+              ? 'w-14 h-14 md:w-16 md:h-16 -my-3 md:-my-4'
+              : 'w-20 h-20 md:w-24 md:h-24 -my-5 md:-my-6'
           }`}>
             {/* Glowing background aura */}
             <div className="absolute inset-1 bg-brand-purple/20 rounded-full blur-md group-hover:bg-brand-purple/40 transition-colors pointer-events-none" />
@@ -92,26 +92,6 @@ export default function Header() {
               className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 invert brightness-[1.5] drop-shadow-[0_0_8px_rgba(139,92,246,0.7)]" 
               referrerPolicy="no-referrer"
             />
-          </div>
-          <div className="flex items-center">
-            <span className="font-heading font-extrabold text-lg md:text-xl text-brand-white tracking-tight flex items-center overflow-hidden">
-              <span>V&nbsp;</span>
-              <span className="text-brand-gold flex items-center">
-                <span>S</span>
-                <span 
-                  className="inline-block whitespace-nowrap overflow-hidden transition-all duration-700 ease-out"
-                  style={{
-                    maxWidth: shouldCollapse ? '0px' : '90px',
-                    opacity: shouldCollapse ? 0 : 1,
-                    transform: shouldCollapse ? 'scaleX(0.8)' : 'scaleX(1)',
-                    transformOrigin: 'left',
-                    marginLeft: shouldCollapse ? '0px' : '1px'
-                  }}
-                >
-                  antiago
-                </span>
-              </span>
-            </span>
           </div>
         </div>
 
