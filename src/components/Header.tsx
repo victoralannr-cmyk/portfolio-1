@@ -59,17 +59,38 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 max-w-7xl mx-auto">
-      {/* Curved / Rounded Header container */}
+      {/* Curved / Rounded Header container with futuristic spaceship style */}
       <div 
-        className={`w-full transition-all duration-300 flex items-center justify-between border ${
+        className={`w-full transition-all duration-300 flex items-center justify-between border relative ${
           isMinimized
-            ? 'py-1.5 md:py-2 px-4 md:px-8 bg-brand-black/95 backdrop-blur-md border-brand-purple/50 shadow-lg shadow-brand-black/70 rounded-xl md:rounded-full'
+            ? 'py-1.5 md:py-2 px-4 md:px-8 bg-brand-black/95 backdrop-blur-md border-brand-purple/60 shadow-lg shadow-brand-black/80 rounded-xl md:rounded-full'
             : isScrolled
-              ? 'py-4 px-6 md:px-10 bg-brand-black/90 backdrop-blur-md border-brand-purple/40 shadow-lg shadow-brand-black/50 rounded-2xl md:rounded-full' 
-              : 'py-4 px-6 md:px-10 bg-brand-purple-dark/80 backdrop-blur-sm border-brand-purple/20 rounded-2xl md:rounded-full'
+              ? 'py-4 px-6 md:px-10 bg-brand-black/90 backdrop-blur-md border-brand-purple/50 shadow-lg shadow-brand-black/75 rounded-2xl md:rounded-full' 
+              : 'py-4 px-6 md:px-10 bg-brand-purple-dark/85 backdrop-blur-md border-brand-purple/30 rounded-2xl md:rounded-full shadow-md shadow-brand-purple-dark/20'
         }`}
         id="app-header-container"
       >
+        {/* Spaceship Left Wingtip / Sensor Beacon */}
+        <div className="absolute -left-2 md:-left-3 top-1/2 -translate-y-1/2 flex items-center gap-1 pointer-events-none z-20">
+          <div className="w-[3px] h-[16px] md:h-[24px] bg-gradient-to-b from-brand-purple to-transparent rounded-full shadow-[0_0_8px_#5C2D8C]" />
+          <div className="w-1.5 h-1.5 bg-brand-purple rounded-full animate-pulse" />
+          <div className="absolute w-1 h-1 bg-brand-white rounded-full left-[5px] md:left-[6px]" />
+        </div>
+
+        {/* Spaceship Right Wingtip / Sensor Beacon */}
+        <div className="absolute -right-2 md:-right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 pointer-events-none z-20 flex-row-reverse">
+          <div className="w-[3px] h-[16px] md:h-[24px] bg-gradient-to-b from-brand-gold to-transparent rounded-full shadow-[0_0_8px_#D4A843]" />
+          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full animate-pulse" style={{ animationDelay: '0.7s' }} />
+          <div className="absolute w-1 h-1 bg-brand-white rounded-full right-[5px] md:right-[6px]" />
+        </div>
+
+        {/* Spaceship thruster plasma light trail */}
+        <div className="absolute -bottom-[1px] left-[15%] right-[15%] h-[1.5px] bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-90 blur-[0.5px] z-20 animate-pulse" />
+        <div className="absolute -bottom-[2px] left-[25%] right-[25%] h-[3px] bg-gradient-to-r from-transparent via-brand-purple to-transparent opacity-75 blur-[2px] z-20" />
+
+        {/* Futuristic top hull plate line */}
+        <div className="absolute -top-[1px] left-[30%] right-[30%] h-[1px] bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent z-20" />
+
         {/* Logo / Brand */}
         <div 
           onClick={() => scrollToSection('top')}
@@ -84,13 +105,13 @@ export default function Header() {
               ? 'w-14 h-14 md:w-16 md:h-16 -my-3 md:-my-4'
               : 'w-20 h-20 md:w-24 md:h-24 -my-5 md:-my-6'
           }`}>
-            {/* Soft static white glowing background aura */}
-            <div className="absolute inset-2 bg-brand-white/10 rounded-full blur-md opacity-50 pointer-events-none" />
+            {/* Soft static white & gold glowing background aura to pop the logo */}
+            <div className="absolute inset-1 bg-gradient-to-tr from-brand-purple/40 to-brand-gold/40 rounded-full blur-md opacity-80 pointer-events-none animate-pulse duration-[3000ms]" />
             
             <img 
               src="https://i.postimg.cc/yxZC2M0L/3bdb5ef7-e8bf-4277-b955-8d0825e5942e.png" 
               alt="V S Logo" 
-              className="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-300 brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" 
+              className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 contrast-[1.3] brightness-[1.1] saturate-[1.1] drop-shadow-[0_0_12px_rgba(212,168,67,0.7)]" 
               referrerPolicy="no-referrer"
             />
           </div>

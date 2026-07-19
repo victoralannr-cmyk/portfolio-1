@@ -328,19 +328,19 @@ export const ShaderGradient: React.FC<ShaderGradientProps> = ({
         </div>
       </div>
 
-      {/* Seamless transition overlays to blend with #1A0A2E (bg-brand-black) */}
+      {/* Seamless transition overlays to blend with #110620 (bg-brand-black) */}
       <div 
         className="absolute top-0 left-0 right-0 h-48 pointer-events-none"
         style={{ 
           zIndex: 3,
-          background: 'linear-gradient(to bottom, #1A0A2E 0%, rgba(26, 10, 46, 0.4) 50%, transparent 100%)'
+          background: 'linear-gradient(to bottom, #110620 0%, rgba(17, 6, 32, 0.4) 50%, transparent 100%)'
         }}
       />
       <div 
         className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none"
         style={{ 
           zIndex: 3,
-          background: 'linear-gradient(to top, #1A0A2E 0%, rgba(26, 10, 46, 0.4) 50%, transparent 100%)'
+          background: 'linear-gradient(to top, #110620 0%, rgba(17, 6, 32, 0.4) 50%, transparent 100%)'
         }}
       />
     </div>

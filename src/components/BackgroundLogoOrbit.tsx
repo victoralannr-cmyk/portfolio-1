@@ -26,7 +26,7 @@ export default function BackgroundLogoOrbit() {
     if (!ctx) return;
 
     // Set background of body to verify visibility
-    document.body.style.backgroundColor = '#1A0A2E';
+    document.body.style.backgroundColor = '#110620';
 
     // 2. Load the logo image
     const img = new Image();
@@ -57,7 +57,7 @@ export default function BackgroundLogoOrbit() {
             size: size,
             angle: Math.random() * Math.PI * 2,
             spinSpeed: (Math.random() - 0.5) * 0.015, // rotation speed
-            opacity: 0.32 + Math.random() * 0.13, // High-visibility opacity (approx 0.32 to 0.45)
+            opacity: 0.18 + Math.random() * 0.1, // Softer background opacity for lower exposure
             baseY: 0,
             waveOffset: Math.random() * Math.PI * 2,
             waveSpeed: 0.002 + Math.random() * 0.005

@@ -12,7 +12,7 @@ export default function Portfolio() {
         axesHelper="on"
         bgColor1="#000000"
         bgColor2="#000000"
-        brightness={1.1}
+        brightness={0.8}
         cAzimuthAngle={220}
         cDistance={3.7}
         cPolarAngle={135}

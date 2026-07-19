@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Users, Briefcase, Award, ArrowUpRight } from 'lucide-react';
 import { ShaderGradient } from './ShaderGradient';
-import { LogoLoop } from './LogoLoop';
 
 function CountUp({ end, duration = 4500, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -70,7 +69,7 @@ export default function Hero() {
         axesHelper="on"
         bgColor1="#000000"
         bgColor2="#000000"
-        brightness={1.1}
+        brightness={0.8}
         cAzimuthAngle={220}
         cDistance={3.7}
         cPolarAngle={135}
@@ -120,22 +119,25 @@ export default function Hero() {
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-brand-white leading-tight tracking-tight mb-6">
-            Sites que encantam, <br />
-            <span className="inline-flex items-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white">
-                S
-              </span>
+            Sites / Pages é; <br />
+            <span className="inline-flex items-center gap-2">
               <span 
-                className="inline-block overflow-hidden transition-all duration-1000 ease-out text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white"
+                className="inline-block transition-all duration-1000 ease-out text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-white"
                 style={{
-                  maxWidth: showRest ? '3.5em' : '0px',
                   opacity: showRest ? 1 : 0,
-                  transform: showRest ? 'translateX(0)' : 'translateX(-10px)',
-                  marginLeft: showRest ? '0.05em' : '0px'
+                  transform: showRest ? 'translateY(0)' : 'translateY(10px)',
                 }}
               >
-                antiago
+                Victor Santiago
               </span>
+              <motion.span 
+                className="inline-block text-xl md:text-2xl"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+                aria-hidden="true"
+              >
+                💻
+              </motion.span>
             </span>
           </h1>
 
@@ -177,27 +179,6 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Logo Loop Showcasing Technology Stack */}
-          <div className="w-full max-w-xl mb-8 bg-brand-purple-dark/20 border border-brand-purple/10 py-3 px-4 rounded-xl">
-            <LogoLoop 
-              logos={[
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />REACT</span> },
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-purple" />TYPESCRIPT</span> },
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />TAILWIND</span> },
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />NODE.JS</span> },
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-gold-light" />NEXT.JS</span> },
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-violet-600" />FIGMA</span> },
-                { node: <span className="text-stone-300 font-mono text-[10px] md:text-xs tracking-widest flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-orange-500" />WEBFLOW</span> }
-              ]} 
-              speed={40}
-              direction="left"
-              logoHeight={24}
-              gap={24}
-              fadeOut={true}
-              fadeOutColor="#190A2E"
-              pauseOnHover={true}
-            />
-          </div>
 
           {/* Core Required Stats Block: right side of the photo */}
           <div className="grid grid-cols-2 gap-4 md:gap-6 mb-10" id="hero-priority-stats">

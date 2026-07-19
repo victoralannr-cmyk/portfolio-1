@@ -6,8 +6,8 @@
   --font-heading: "Plus Jakarta Sans", "Space Grotesk", sans-serif;
   --font-editorial: "Playfair Display", Georgia, serif;
 
-  --color-brand-black: #1A0A2E;
-  --color-brand-purple-dark: #2D1554;
+  --color-brand-black: #110620;
+  --color-brand-purple-dark: #200E3C;
   --color-brand-purple: #5C2D8C;
   --color-brand-white: #F0F0F0;
   --color-brand-gold: #D4A843;
@@ -17,7 +17,7 @@
 /* Custom scrollbar and smooth scroll */
 html {
   scroll-behavior: smooth;
-  background-color: #1A0A2E;
+  background-color: #110620;
   color: #F0F0F0;
 }
 
@@ -26,7 +26,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A0A2E;
+  background: #110620;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -46,134 +46,6 @@ html {
 
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
-}
-
-/* LogoLoop Component Styles */
-.logoloop {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.logoloop--horizontal {
-  display: flex;
-  flex-direction: row;
-}
-
-.logoloop--vertical {
-  display: flex;
-  flex-direction: column;
-}
-
-.logoloop__track {
-  display: flex;
-  will-change: transform;
-}
-
-.logoloop--horizontal .logoloop__track {
-  flex-direction: row;
-  width: max-content;
-}
-
-.logoloop--vertical .logoloop__track {
-  flex-direction: column;
-  height: max-content;
-}
-
-.logoloop__list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  flex-shrink: 0;
-}
-
-.logoloop--horizontal .logoloop__list {
-  flex-direction: row;
-  align-items: center;
-  gap: var(--logoloop-gap, 32px);
-  padding-right: var(--logoloop-gap, 32px);
-}
-
-.logoloop--vertical .logoloop__list {
-  flex-direction: column;
-  align-items: center;
-  gap: var(--logoloop-gap, 32px);
-  padding-bottom: var(--logoloop-gap, 32px);
-}
-
-.logoloop__item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  white-space: nowrap;
-  height: var(--logoloop-logoHeight, 28px);
-}
-
-.logoloop__link {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  height: 100%;
-}
-
-.logoloop__node {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  white-space: nowrap;
-  height: 100%;
-}
-
-/* Fade effects */
-.logoloop--fade::before,
-.logoloop--fade::after {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.logoloop--horizontal.logoloop--fade::before {
-  top: 0;
-  left: 0;
-  width: 15%;
-  height: 100%;
-  background: linear-gradient(to right, var(--logoloop-fadeColor, #1A0A2E), transparent);
-}
-
-.logoloop--horizontal.logoloop--fade::after {
-  top: 0;
-  right: 0;
-  width: 15%;
-  height: 100%;
-  background: linear-gradient(to left, var(--logoloop-fadeColor, #1A0A2E), transparent);
-}
-
-.logoloop--vertical.logoloop--fade::before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
-  background: linear-gradient(to bottom, var(--logoloop-fadeColor, #1A0A2E), transparent);
-}
-
-.logoloop--vertical.logoloop--fade::after {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
-  background: linear-gradient(to top, var(--logoloop-fadeColor, #1A0A2E), transparent);
-}
-
-/* Scale on hover */
-.logoloop--scale-hover .logoloop__item {
-  transition: transform 0.2s ease;
-}
-
-.logoloop--scale-hover .logoloop__item:hover {
-  transform: scale(1.05);
 }
 
 /* Lightfall Background Styles */

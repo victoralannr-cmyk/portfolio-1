@@ -14,7 +14,7 @@ export default function LightfallBackground({ children, className = '', id }: Li
       const duration = 7 + Math.random() * 9; // speed profiles (7s to 16s)
       const delay = Math.random() * -15; // staggered birthtimes
       const scaleY = 0.5 + Math.random() * 0.9; // random height variations
-      const opacity = 0.12 + Math.random() * 0.38; // subtle ambient brightness
+      const opacity = 0.08 + Math.random() * 0.25; // darker ambient brightness
       const width = Math.random() > 0.75 ? '1.5px' : '1px'; // realistic thin fiber widths
       
       // Warm golden, deep indigo/purple & magenta highlights
@@ -34,8 +34,8 @@ export default function LightfallBackground({ children, className = '', id }: Li
       <div className="absolute inset-0 bg-brand-black -z-20 pointer-events-none" />
 
       {/* Decorative colored glow backdrops */}
-      <div className="absolute top-[20%] left-[-15%] w-[55%] h-[40%] bg-brand-purple/10 rounded-full blur-[130px] -z-15 pointer-events-none animate-pulse duration-[11000ms]" />
-      <div className="absolute bottom-[10%] right-[-15%] w-[50%] h-[50%] bg-brand-gold/5 rounded-full blur-[150px] -z-15 pointer-events-none animate-pulse duration-[14000ms]" />
+      <div className="absolute top-[20%] left-[-15%] w-[55%] h-[40%] bg-brand-purple/6 rounded-full blur-[130px] -z-15 pointer-events-none animate-pulse duration-[11000ms]" />
+      <div className="absolute bottom-[10%] right-[-15%] w-[50%] h-[50%] bg-brand-gold/3 rounded-full blur-[150px] -z-15 pointer-events-none animate-pulse duration-[14000ms]" />
 
       {/* Animated Light beams */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
