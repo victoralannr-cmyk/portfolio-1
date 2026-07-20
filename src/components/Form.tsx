@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { Send, CheckCircle2, MessageSquare, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { ContactFormData } from '../types';
 import LightfallBackground from './LightfallBackground';
 
@@ -74,10 +74,6 @@ export default function Form() {
         
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-brand-purple-dark/60 border border-brand-purple/40 px-3 py-1 rounded-full text-brand-gold text-xs font-semibold mb-3">
-            <MessageSquare size={13} />
-            CONTRATAÇÃO IMEDIATA
-          </div>
           <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-brand-white mb-4">
             Vamos Fechar Negócio?
           </h2>
@@ -190,7 +186,7 @@ export default function Form() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white font-extrabold text-sm md:text-base uppercase tracking-wider hover:from-brand-gold hover:to-brand-purple transition-all duration-300 shadow-xl hover:shadow-brand-gold/20 hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3 cursor-pointer animate-gradient-btn"
+                className="w-full py-4 rounded-xl text-brand-black font-extrabold text-sm md:text-base uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-brand-gold/30 hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3 cursor-pointer animate-gold-silver"
                 id="form-submit-cta"
               >
                 <span>{isSubmitting ? 'Redirecionando...' : 'Fechar negócio'}</span>

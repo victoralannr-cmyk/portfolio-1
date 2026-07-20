@@ -112,12 +112,6 @@ export default function Hero() {
         
         {/* Left Side: Introduction & Stats (Required: clientes satisfeitos: 250, 1 ano de experiencia) */}
         <div className="w-full lg:w-1/2 text-left flex flex-col justify-center" id="hero-info-column">
-          {/* Greeting Badge */}
-          <div className="inline-flex items-center gap-2 bg-brand-purple-dark/60 border border-brand-purple/50 px-4 py-1.5 rounded-full text-brand-white/95 text-xs font-semibold mb-6 w-fit animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-brand-gold" />
-            Portfólio 💼
-          </div>
-
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-brand-white leading-tight tracking-tight mb-6">
             Sites / Pages é; <br />
             <span className="inline-flex items-center gap-2">
@@ -219,7 +213,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Tenho%20interesse%20em%20fechar%20neg%C3%B3cio%20e%20fazer%20um%20or%C3%A7amento%20para%20o%20meu%20projeto.', '_blank')}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white font-extrabold text-center hover:shadow-lg hover:shadow-brand-gold/35 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer animate-gradient-btn"
+              className="px-8 py-4 rounded-xl text-brand-black font-extrabold text-center shadow-lg shadow-brand-gold/15 hover:shadow-brand-gold/40 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer animate-gold-silver"
               id="hero-cta-button-deal"
             >
               <span>Fechar Negócio</span>
@@ -227,7 +221,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20ver%20mais%20projetos%20e%20conhecer%20os%20seus%20trabalhos.', '_blank')}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/30 to-brand-purple-dark/80 hover:from-brand-purple hover:to-brand-purple-dark border border-brand-purple/50 text-brand-white font-bold text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-indigo-950/40 animate-gradient-btn"
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/20 to-brand-purple-dark/80 hover:bg-brand-purple-dark/95 border border-brand-gold/40 text-brand-white font-bold text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
               id="hero-cta-button-projects"
             >
               <span>Ver Projetos</span>

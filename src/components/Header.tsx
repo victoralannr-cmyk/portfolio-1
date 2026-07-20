@@ -153,7 +153,7 @@ export default function Header() {
         <div className="hidden md:block">
           <button
             onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20fechar%20neg%C3%B3cio%20e%20iniciar%20um%20projeto.', '_blank')}
-            className="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white font-bold text-sm hover:from-brand-gold hover:to-brand-purple hover:scale-105 active:scale-95 transition-all duration-300 shadow-md hover:shadow-brand-gold/30 flex items-center gap-2 cursor-pointer animate-gradient-btn"
+            className="px-6 py-2.5 rounded-full text-brand-black font-extrabold text-sm hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-brand-gold/10 hover:shadow-brand-gold/40 flex items-center gap-2 cursor-pointer animate-gold-silver"
             id="header-cta-button"
           >
             <span>Fechar Negócio</span>
@@ -165,7 +165,7 @@ export default function Header() {
         <div className="md:hidden flex items-center gap-3">
           <button
             onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20fechar%20neg%C3%B3cio%20e%20iniciar%20um%20projeto.', '_blank')}
-            className="px-4 py-2 rounded-full bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white font-extrabold text-xs hover:scale-105 active:scale-95 transition-all duration-300 shadow-md cursor-pointer animate-gradient-btn"
+            className="px-4 py-2 rounded-full text-brand-black font-extrabold text-xs hover:scale-105 active:scale-95 transition-all duration-300 shadow-md cursor-pointer animate-gold-silver"
             id="header-cta-mobile"
           >
             Fechar Negócio

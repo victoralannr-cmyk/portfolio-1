@@ -1,4 +1,4 @@
-import { Sparkles, CheckCircle, Smartphone, Layout, Rocket } from 'lucide-react';
+import { CheckCircle, Smartphone, Layout, Rocket } from 'lucide-react';
 import { SERVICES } from '../data';
 import LightfallBackground from './LightfallBackground';
 
@@ -9,10 +9,6 @@ export default function Services() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-brand-purple-dark/60 border border-brand-purple/40 px-3 py-1 rounded-full text-brand-gold text-xs font-semibold mb-3">
-            <Sparkles size={12} className="animate-spin duration-[6000ms]" />
-            SOLUÇÕES & SERVIÇOS
-          </div>
           <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-brand-white mb-4">
             Serviços Especializados
           </h2>
@@ -72,7 +68,7 @@ export default function Services() {
                     const whatsappUrl = `https://api.whatsapp.com/send?phone=5585998504580&text=${encodeURIComponent(messageText)}`;
                     window.open(whatsappUrl, '_blank');
                   }}
-                  className="w-full py-3 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light hover:scale-105 hover:text-brand-white text-brand-white font-extrabold text-xs tracking-wider uppercase border border-brand-purple/50 hover:border-brand-gold transition-all duration-300 cursor-pointer shadow-md animate-gradient-btn"
+                  className="w-full py-3 rounded-xl text-brand-black font-extrabold text-xs tracking-wider uppercase border border-brand-gold/30 hover:scale-105 transition-all duration-300 cursor-pointer shadow-md animate-gold-silver"
                   id={`service-cta-btn-${service.id}`}
                 >
                   Solicitar Serviços de {service.title}

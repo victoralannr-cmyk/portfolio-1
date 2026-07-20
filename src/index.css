@@ -110,8 +110,8 @@ html {
   animation: spin-slow-reverse 150s linear infinite;
 }
 
-/* Animated gradient button helper */
-@keyframes animate-gradient {
+/* Premium Gold & Silver Liquid Metal Animated Gradient */
+@keyframes gold-silver-flow {
   0% {
     background-position: 0% 50%;
   }
@@ -123,6 +123,22 @@ html {
   }
 }
 
+.animate-gold-silver {
+  background: linear-gradient(
+    135deg,
+    #9A7B31 0%,    /* Rich Gold Dark */
+    #D4A843 15%,   /* Gold */
+    #F0CD7A 30%,   /* Gold Light */
+    #E2E8F0 50%,   /* Silver */
+    #FFFFFF 65%,   /* White Silver */
+    #CBD5E1 80%,   /* Sleek Medium Silver */
+    #9A7B31 100%   /* Loop back to Rich Gold Dark */
+  );
+  background-size: 300% 300%;
+  animation: gold-silver-flow 5s ease infinite;
+}
+
+/* Backward compatibility or simplified selector */
 .animate-gradient-btn {
   background-size: 200% 200%;
   animation: animate-gradient 4s ease infinite;

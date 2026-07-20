@@ -55,10 +55,6 @@ export default function Portfolio() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-brand-purple-dark/60 border border-brand-purple/40 px-3 py-1 rounded-full text-brand-gold text-xs font-semibold mb-3">
-            <Globe size={12} />
-            TRABALHOS RECENTES
-          </div>
           <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-brand-white mb-4">
             Projetos em Destaque
           </h2>
@@ -170,7 +166,7 @@ export default function Portfolio() {
           </div>
           <button
             onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Estava%20vendo%20o%20seu%20portf%C3%B3lio%20de%20projetos%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20alta%20performance%20para%20a%20minha%20empresa.', '_blank')}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-purple via-brand-gold to-brand-gold-light text-brand-white md:w-auto font-bold text-sm hover:from-brand-gold hover:to-brand-purple hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shadow-md hover:shadow-brand-gold/30 animate-gradient-btn"
+            className="px-6 py-3 rounded-xl text-brand-black md:w-auto font-extrabold text-sm hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shadow-lg shadow-brand-gold/10 hover:shadow-brand-gold/40 animate-gold-silver"
             id="portfolio-cta-btn"
           >
             Quero um orçamento
