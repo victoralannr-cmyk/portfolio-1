@@ -108,10 +108,10 @@ export default function Hero() {
         wireframe={false}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center gap-8">
         
-        {/* Left Side: Introduction & Stats (Required: clientes satisfeitos: 250, 1 ano de experiencia) */}
-        <div className="w-full lg:w-1/2 text-left flex flex-col justify-center" id="hero-info-column">
+        {/* Full-width Stacked Column Layout */}
+        <div className="w-full flex flex-col items-center justify-center" id="hero-info-column">
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-brand-white leading-tight tracking-tight mb-6">
             Sites / Pages é; <br />
             <span className="inline-flex items-center gap-2">
@@ -135,8 +135,60 @@ export default function Hero() {
             </span>
           </h1>
 
+          {/* Photo with custom premium frame (Placed right below the title) */}
+          <div className="relative group max-w-xs md:max-w-sm w-full px-4 mb-8" id="hero-photo-wrapper">
+            {/* Outer decorative gradient border */}
+            <div className="absolute -inset-1 bg-gradient-to-tr from-brand-purple via-brand-gold to-brand-gold-light rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-500 group-hover:scale-[1.01]" />
+            
+            {/* Main Image frame */}
+            <div className="relative bg-brand-black rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-purple/50">
+              <img 
+                src="https://i.postimg.cc/WzCfr8fN/Whats-App-Image-2026-06-16-at-20-28-18.jpg" 
+                alt="Victor Santiago - Desenvolvedor Web" 
+                className="w-full h-[320px] md:h-[400px] object-cover object-top transition duration-500 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+                id="developer-profile-image"
+              />
+              
+              {/* Gold gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/10 to-transparent opacity-80" />
+              
+              {/* Small floating tag on the image */}
+              <div className="absolute bottom-4 left-4 right-4 bg-brand-black/80 backdrop-blur-md px-4 py-3 rounded-xl border border-brand-purple/30 flex items-center justify-between">
+                <div className="text-left">
+                  <p className="text-white font-semibold text-sm">Victor Santiago</p>
+                  <p className="text-white/60 text-xs">Desenvolvedor Web & Designer</p>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                  <span className="text-xs text-emerald-400 font-medium">Online agora</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Action Callouts */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-8 w-full max-w-md">
+            <button
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Tenho%20interesse%20em%20fechar%20neg%C3%B3cio%20e%20fazer%20um%20or%C3%A7amento%20para%20o%20meu%20projeto.', '_blank')}
+              className="px-8 py-4 rounded-xl text-brand-black font-extrabold text-center shadow-lg shadow-brand-gold/15 hover:shadow-brand-gold/40 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer animate-gold-silver w-full sm:w-auto"
+              id="hero-cta-button-deal"
+            >
+              <span>Fechar Negócio</span>
+              <ArrowRight size={18} />
+            </button>
+            <button
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20ver%20mais%20projetos%20e%20conhecer%20os%20seus%20trabalhos.', '_blank')}
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/20 to-brand-purple-dark/80 hover:bg-brand-purple-dark/95 border border-brand-gold/40 text-brand-white font-bold text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md w-full sm:w-auto"
+              id="hero-cta-button-projects"
+            >
+              <span>Ver Projetos</span>
+              <ArrowUpRight size={18} />
+            </button>
+          </div>
+
           <motion.div 
-            className="font-editorial italic text-2xl md:text-3xl text-brand-gold-light/95 tracking-wide mb-6 max-w-xl flex flex-wrap gap-x-[0.25em]"
+            className="font-editorial italic text-2xl md:text-3xl text-brand-gold-light/95 tracking-wide mb-8 max-w-xl flex flex-wrap gap-x-[0.25em] justify-center"
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -174,10 +226,10 @@ export default function Hero() {
           </motion.div>
 
 
-          {/* Core Required Stats Block: right side of the photo */}
-          <div className="grid grid-cols-2 gap-4 md:gap-6 mb-10" id="hero-priority-stats">
+          {/* Core Required Stats Block: under the elements */}
+          <div className="grid grid-cols-2 gap-4 md:gap-6 mb-4 w-full max-w-lg mx-auto" id="hero-priority-stats">
             {/* Clientes Satisfeitos: 250 */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-purple-dark/80 to-brand-black border border-brand-purple/30 hover:border-brand-gold/40 transition-all duration-300 group shadow-md shadow-brand-black/30">
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-purple-dark/80 to-brand-black border border-brand-purple/30 hover:border-brand-gold/40 transition-all duration-300 group shadow-md shadow-brand-black/30 text-left">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-300">
                   <Users size={20} />
@@ -193,7 +245,7 @@ export default function Hero() {
             </div>
 
             {/* 1 ano de experiencia */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-purple-dark/80 to-brand-black border border-brand-purple/30 hover:border-brand-gold/40 transition-all duration-300 group shadow-md shadow-brand-black/30">
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-purple-dark/80 to-brand-black border border-brand-purple/30 hover:border-brand-gold/40 transition-all duration-300 group shadow-md shadow-brand-black/30 text-left">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-300">
                   <Briefcase size={20} />
@@ -206,61 +258,6 @@ export default function Hero() {
               <p className="text-brand-white/60 text-xs md:text-sm mt-1">
                 De Experiência Sólida
               </p>
-            </div>
-          </div>
-
-          {/* Action Callouts */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <button
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Tenho%20interesse%20em%20fechar%20neg%C3%B3cio%20e%20fazer%20um%20or%C3%A7amento%20para%20o%20meu%20projeto.', '_blank')}
-              className="px-8 py-4 rounded-xl text-brand-black font-extrabold text-center shadow-lg shadow-brand-gold/15 hover:shadow-brand-gold/40 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer animate-gold-silver"
-              id="hero-cta-button-deal"
-            >
-              <span>Fechar Negócio</span>
-              <ArrowRight size={18} />
-            </button>
-            <button
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20ver%20mais%20projetos%20e%20conhecer%20os%20seus%20trabalhos.', '_blank')}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/20 to-brand-purple-dark/80 hover:bg-brand-purple-dark/95 border border-brand-gold/40 text-brand-white font-bold text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
-              id="hero-cta-button-projects"
-            >
-              <span>Ver Projetos</span>
-              <ArrowUpRight size={18} />
-            </button>
-          </div>
-        </div>
-
-        {/* Right Side: Photo with custom premium frame */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end" id="hero-photo-column">
-          <div className="relative group max-w-sm md:max-w-md w-full px-4">
-            
-            {/* Outer decorative gradient border */}
-            <div className="absolute -inset-1 bg-gradient-to-tr from-brand-purple via-brand-gold to-brand-gold-light rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-500 group-hover:scale-[1.01]" />
-            
-            {/* Main Image frame */}
-            <div className="relative bg-brand-black rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-purple/50">
-              <img 
-                src="https://i.postimg.cc/WzCfr8fN/Whats-App-Image-2026-06-16-at-20-28-18.jpg" 
-                alt="Victor Santiago - Desenvolvedor Web" 
-                className="w-full h-[380px] md:h-[480px] object-cover object-top transition duration-500 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-                id="developer-profile-image"
-              />
-              
-              {/* Gold gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/10 to-transparent opacity-80" />
-              
-              {/* Small floating tag on the image */}
-              <div className="absolute bottom-4 left-4 right-4 bg-brand-black/80 backdrop-blur-md px-4 py-3 rounded-xl border border-brand-purple/30 flex items-center justify-between">
-                <div>
-                  <p className="text-white font-semibold text-sm">Victor Santiago</p>
-                  <p className="text-white/60 text-xs">Desenvolvedor Web & Designer</p>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                  <span className="text-xs text-emerald-400 font-medium">Online agora</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
