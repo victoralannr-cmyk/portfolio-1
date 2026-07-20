@@ -7,8 +7,7 @@ export const PROJECTS: Project[] = [
     url: 'https://kivoagency.com.br/',
     description: 'Website oficial e landing page institucional premium para agência de marketing digital. Possui design futurista, animações fluidas de alto padrão, SEO técnico otimizado para os primeiros lugares do Google e design 100% focado em geração de leads qualificados.',
     category: 'Site Institucional',
-    tags: ['React', 'Tailwind CSS', 'Next.js', 'SEO Otimizado', 'Copy Persuasiva'],
-    stats: 'Performance de 99% no Lighthouse'
+    tags: ['React', 'Tailwind CSS', 'Next.js', 'SEO Otimizado', 'Copy Persuasiva']
   },
   {
     id: 'pagvend',
@@ -16,8 +15,7 @@ export const PROJECTS: Project[] = [
     url: 'https://pagvend.vercel.app/',
     description: 'Página de alta conversão voltada para o mercado de vendas online e intermediação financeira. Desenvolvida sob conceitos rígidos de neuromarketing, com elementos visuais que geram escassez, confiabilidade, facilitação de leitura e botões de chamada rápida para checkout.',
     category: 'Landing Page',
-    tags: ['SPA React', 'Animações Motion', 'Conversão de Checkout', 'Responsive Design'],
-    stats: 'Aumento de 35% nas conversões'
+    tags: ['SPA React', 'Animações Motion', 'Conversão de Checkout', 'Responsive Design']
   },
   {
     id: 'kivommedicc',
@@ -25,8 +23,7 @@ export const PROJECTS: Project[] = [
     url: 'https://kivommedicc.vercel.app/',
     description: 'Landing page especializada para profissionais da saúde e clínicas médicas premium. Focada no agendamento de consultas com layout limpo que inspira confiança, elegância médica, seção de tratamentos detalhada e botões estratégicos de direcionamento para o WhatsApp.',
     category: 'Landing Page',
-    tags: ['Vite + React', 'Estética Clean', 'Agendamento WhatsApp', 'Mobile Ready'],
-    stats: 'Agendamentos 2x mais rápidos'
+    tags: ['Vite + React', 'Estética Clean', 'Agendamento WhatsApp', 'Mobile Ready']
   }
 ];
 
