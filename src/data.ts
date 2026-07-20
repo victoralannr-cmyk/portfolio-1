@@ -47,7 +47,7 @@ export const SERVICES: Service[] = [
     id: 'sites-institucionais',
     title: 'Sites Completos',
     description: 'Sites institucionais elegantes que consolidam a autoridade digital e a presença online da sua empresa no mercado moderno.',
-    badge: 'Autoridade & Marca',
+    badge: '',
     features: [
       'Múltiplas páginas institucionais explicativas',
       'Painel gerenciável opcional pelo cliente',
@@ -59,7 +59,7 @@ export const SERVICES: Service[] = [
     id: 'apps',
     title: 'Aplicativos & Sistemas',
     description: 'Sistemas web robustos e aplicativos integrados sob medida, pensados para otimizar processos da sua empresa ou rodar o seu SaaS.',
-    badge: 'Alta Performance',
+    badge: '',
     features: [
       'Interfaces dinâmicas e responsivas de alto nível',
       'Banco de dados integrado e escalável',

@@ -171,19 +171,19 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-8 w-full max-w-md">
             <button
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Tenho%20interesse%20em%20fechar%20neg%C3%B3cio%20e%20fazer%20um%20or%C3%A7amento%20para%20o%20meu%20projeto.', '_blank')}
-              className="px-8 py-4 rounded-xl text-brand-black font-extrabold text-center shadow-lg shadow-brand-gold/15 hover:shadow-brand-gold/40 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer animate-gold-silver w-full sm:w-auto"
+              className="px-6 py-2.5 rounded-xl text-brand-black font-extrabold text-sm text-center shadow-md shadow-brand-gold/15 hover:shadow-brand-gold/40 hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-1.5 cursor-pointer animate-gold-silver w-full sm:w-auto"
               id="hero-cta-button-deal"
             >
               <span>Fechar Negócio</span>
-              <ArrowRight size={18} />
+              <ArrowRight size={15} />
             </button>
             <button
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5585998504580&text=Ol%C3%A1%20Victor%21%20Gostaria%20de%20ver%20mais%20projetos%20e%20conhecer%20os%20seus%20trabalhos.', '_blank')}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/20 to-brand-purple-dark/80 hover:bg-brand-purple-dark/95 border border-brand-gold/40 text-brand-white font-bold text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md w-full sm:w-auto"
+              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-purple-dark/80 via-brand-purple/20 to-brand-purple-dark/80 hover:bg-brand-purple-dark/95 border border-brand-gold/40 text-brand-white font-bold text-sm text-center hover:border-brand-gold-light hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md w-full sm:w-auto"
               id="hero-cta-button-projects"
             >
               <span>Ver Projetos</span>
-              <ArrowUpRight size={18} />
+              <ArrowUpRight size={15} />
             </button>
           </div>
 
